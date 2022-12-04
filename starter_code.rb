@@ -1,35 +1,75 @@
-class Square
-  def initialize(w, h)
+class Pet
+  
+  def make_noise
+    puts "The #{@animal} made a sound: #{noise}"
+  end
+  
+  def num_legs
     
   end
 
-  def get_area
-    return 
+  def show_name
+    
   end
 
-  def get_perimeter
-    return 
+  def count_legs
+    
   end
-
 end
 
-class Rectangle < Square
-
-  def initialize(w, h)
+class Dog < Pet
+  
+  def initialize(name)
     
   end
 
-  def get_perimeter
-    return 
-  end
+  def noise
     
+  end
 end
 
-square = Square.new(5,5)
-rect = Rectangle.new(5, 3)
+class Cat < Pet
 
-puts "Area of Square: #{square.get_area}"
-puts "Area of Rectangle: #{rect.get_area}"
+  def initialize(name, friendly = TRUE)
+    @legs = 4
+    @name = name
+    @friendly = friendly
+    @animal = "Cat"
+  end
+  
+  def noise
+    if @friendly
+      "meow"
+    else 
+      "hiss"
+    end
+  end
+end
 
-puts "Perimeter of Square: #{square.get_perimeter}"
-puts "Perimeter of Rectangle: #{rect.get_perimeter}"
+class Lizard < Pet
+  def initialize(name)
+    
+  end
+
+  def noise
+    
+  end
+end
+
+class Fish < Pet
+  def initialize(name)
+    
+  end
+
+  def noise
+    
+  end
+end
+
+d = Dog.new("test")
+c = Cat.new("cat")
+l = Lizard.new("liz")
+f = Fish.new("fish")
+cc = Cat.new("mean cat", FALSE)
+
+pet_list = d, c, l, f, cc
